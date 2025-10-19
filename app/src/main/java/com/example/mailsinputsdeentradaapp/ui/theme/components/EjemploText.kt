@@ -10,17 +10,27 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-    fun EjemploText() {
-        TarjetaEjemplo(
-            titulo = "Text",
-            description = "Componente basico para mostrar texto"
-        ) {
+fun EjemploText() {
+    TarjetaEjemplo(
+        titulo = "Text",
+        description = "Componente básico para mostrar texto",
+        contenido = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Text("Text normal")
                 Text("Texto en negritas", fontWeight = FontWeight.Bold)
                 Text("Texto grande", fontSize = 24.sp)
                 Text("Texto de color", color = Color.Blue)
-
             }
+        },
+        codigo = {
+            CajaCodigo(
+                "Text(\n" +
+                        "text\n" +
+                        "fontWeight\n" +
+                        "fontSize\n" +
+                        "color\n" +
+                        ")"
+            )
         }
-    }
+    )
+}

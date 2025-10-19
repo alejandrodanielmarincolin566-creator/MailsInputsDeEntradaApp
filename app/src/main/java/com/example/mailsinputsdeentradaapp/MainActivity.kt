@@ -28,6 +28,7 @@ import com.example.mailsinputsdeentradaapp.ui.theme.components.EjemploRadioButto
 import com.example.mailsinputsdeentradaapp.ui.theme.components.EjemploSwitch
 import com.example.mailsinputsdeentradaapp.ui.theme.components.EjemploText
 import com.example.mailsinputsdeentradaapp.ui.theme.components.EjemploTextField
+import com.example.mailsinputsdeentradaapp.ui.theme.components.EjemploTextFieldPassword
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,6 +75,8 @@ fun ComponentesApp(){
             item { EjemploSwitch() }
             item { SeleccionTitulo("6. RADIO BUTTON") }
             item { EjemploRadioButton() }
+            item { SeleccionTitulo("7. TEXT FIELD PASSWORD") }
+            item { EjemploTextFieldPassword() }
         }
 
     }

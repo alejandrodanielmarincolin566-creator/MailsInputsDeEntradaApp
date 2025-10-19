@@ -2,12 +2,11 @@ package com.example.mailsinputsdeentradaapp.ui.theme.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -20,9 +19,10 @@ import androidx.compose.ui.unit.sp
 fun TarjetaEjemplo(
     titulo: String,
     description: String,
-    contenido: @Composable () -> Unit
-){
-    Card (
+    contenido: @Composable () -> Unit,
+    codigo: @Composable () -> Unit
+) {
+    Card(
         modifier = Modifier.fillMaxWidth(),
         elevation = CardDefaults.cardElevation(2.dp)
     ) {
@@ -30,11 +30,11 @@ fun TarjetaEjemplo(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-
             Text(titulo, fontSize = 16.sp, fontWeight = FontWeight.Bold)
             Text(description, fontSize = 13.sp, color = Color.Gray)
-            Divider()
+            HorizontalDivider()
             contenido()
+            codigo()
         }
     }
 }
